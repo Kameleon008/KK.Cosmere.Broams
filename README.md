@@ -49,6 +49,9 @@ Wersja bieżąca (v3, trigger = ciemność):
 - skala produkcji (10 szt. prototyp vs 10 000 szt.) → determinuje koszt
 - czy trigger od wstrząsu ma wrócić jako dodatek (gest / potrząśnięcie) obok
   triggera od światła?
+- **czy broam ma mieć BLE** (konfiguracja z apki, OTA, „znajdź broama”,
+  synchronizacja grupy, tap NFC)? Jeśli tak — patrz `docs/analiza-ch584m.md`
+  (CH584M): +1,4–2,5 $ i czuwanie 3–9 µA zamiast 0,4 µA.
 
 ## Wyniki obliczeń (skrót, `simulation/obliczenia.py`)
 
@@ -95,12 +98,15 @@ Wersja bieżąca (v3, trigger = ciemność):
 ## Pliki
 - `README.md` — ten plik: cel, wymagania, założenia, wyniki
 - `docs/architektura.md` — architektura układu, decyzje, stan schematu i ERC
+- `docs/analiza-ch584m.md` — analiza alternatywnego uC (WCH CH584M, BLE 5.4):
+  bilans mocy, koszt, miejsce na PCB, ryzyka RF/certyfikacji
 - `schematic/` — projekt KiCad: `broam.kicad_pro`, `broam.kicad_sch`,
   `broam.kicad_sym`, `sym-lib-table`, `fp-lib-table` + eksporty `broam.net`,
   `broam.erc.json`, `broam.pdf`
 - `simulation/obliczenia.py` — bilans energii, dobór ogniwa, timer, ładowanie (v1)
 - `simulation/obliczenia_v2.py` — wariant ładowalny indukcyjnie + RGB + uC (v2)
 - `simulation/obliczenia_v3.py` — trigger = ciemność: one-shot i night-light (v3)
+- `simulation/obliczenia_ch584.py` — wariant z CH584M: czuwanie, BLE, koszt, PCB
 - `simulation/timer_rc.py` — pasywny timer RC + MOSFET (wariant bez uC)
 - `simulation/fix_sch.py` — naprawa schematu po serwerze MCP `kicad`
 - `bom/BOM.csv` — lista materiałów

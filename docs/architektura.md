@@ -135,6 +135,11 @@ wymaga LDO; MCU o zakresie ≥ 5,5 V działa **wprost z LiPo**.
 | ATtiny402 | AVR | 1,8–5,5 V | 12-bit | ~0,1–0,5 µA | SOIC-8 | 0,40–0,60 | UPDI |
 | STM32F030F4P6 | Cortex-M0 | 2,4–3,6 V | 12-bit | ~5–20 µA | TSSOP-20 | 0,60–0,90 | ST-Link (LDO!) |
 | STM32L011F4P6 | Cortex-M0+ | 1,65–3,6 V | 12-bit | ~0,3–1 µA | TSSOP-20 | 0,90–1,50 | ST-Link (LDO!) |
+| CH584M (BLE 5.4) | RISC-V3C | **1,85–3,6 V** | 12-bit (14 kan.) | 2,6 µA (Sleep) / 0,65 µA (Shutdown) | QFN48 5×5 | 0,58 | WCH-LinkE (~3 $) |
+
+Uwaga do `CH584M`: wymaga **LDO** (LiPo 4,2 V > 3,6 V), **kwarcu 32 MHz** dla BLE
+i ma wejście antenowe 2,4 GHz — pełna analiza, bilans mocy, koszt i ryzyka RF:
+`docs/analiza-ch584m.md` + `simulation/obliczenia_ch584.py`.
 
 \* standby do weryfikacji w nocie.
 
