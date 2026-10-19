@@ -1,0 +1,1388 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-10-19T18:19:58",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error",
+        "warning",
+        "exclusion"
+    ],
+    "kicad_version": "10.0.7",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/0a1b2c3d-4e5f-6071-8293-a4b5c6d7e8f9",
+            "violations": [
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 25.0,
+                                "y": 236.19
+                            },
+                            "uuid": "1104c267-a997-4d51-b2a3-78c5c7b61554"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol L1 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 25.0,
+                                "y": 236.19
+                            },
+                            "uuid": "e3f8ad0c-61a8-43f2-8b64-f947932c34f9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol L1 [L]",
+                            "pos": {
+                                "x": 25.0,
+                                "y": 240.0
+                            },
+                            "uuid": "b639eaea-9b83-46ef-b441-625d32007eb4"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 25.0,
+                                "y": 243.81
+                            },
+                            "uuid": "741232b6-8d5b-4788-be61-990d0251a88f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 25.0,
+                                "y": 271.19
+                            },
+                            "uuid": "7d4d5294-67f3-4270-a953-cb486cb38138"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C1 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 25.0,
+                                "y": 271.19
+                            },
+                            "uuid": "f746c8ca-f0b5-4f7e-9856-c3cfe82723fc"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C1 [C]",
+                            "pos": {
+                                "x": 25.0,
+                                "y": 275.0
+                            },
+                            "uuid": "08254037-6544-4348-9632-9fedb0d07067"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 25.0,
+                                "y": 278.81
+                            },
+                            "uuid": "8a9bb666-5721-462c-b260-d2300e1d409c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Poziome połączenie, długość 5.08 mm",
+                            "pos": {
+                                "x": 49.84,
+                                "y": 242.54
+                            },
+                            "uuid": "69dcaf8c-2d72-45cc-ad73-b88641dd2302"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol Q1 [Q_Photo_NPN]",
+                            "pos": {
+                                "x": 50.0,
+                                "y": 60.0
+                            },
+                            "uuid": "0c026274-95dc-4311-9b26-ec49ae160dfb"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol R4 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 50.0,
+                                "y": 81.19
+                            },
+                            "uuid": "806942d6-435f-439d-a4c4-216b3445bbe1"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 50.0,
+                                "y": 81.19
+                            },
+                            "uuid": "e4b8b787-9951-495a-89ee-94f4d1733c92"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R4 [R]",
+                            "pos": {
+                                "x": 50.0,
+                                "y": 85.0
+                            },
+                            "uuid": "76e88386-eb6d-4fa1-a89d-839aa76b756d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 50.0,
+                                "y": 88.81
+                            },
+                            "uuid": "bd5a7e1d-9003-43af-a809-8247aa9b92c8"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Poziome połączenie, długość 5.08 mm",
+                            "pos": {
+                                "x": 52.38,
+                                "y": 305.0
+                            },
+                            "uuid": "b41868a1-3744-4836-825a-a965f6e0edc4"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol Q1 Pin 1 [C, Passive, Line]",
+                            "pos": {
+                                "x": 52.54,
+                                "y": 54.92
+                            },
+                            "uuid": "206585c6-de9e-4a31-8b2e-45e921af8d56"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 52.54,
+                                "y": 54.92
+                            },
+                            "uuid": "7a041528-06c5-4f8a-8a84-f524a4b8accf"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 52.54,
+                                "y": 65.08
+                            },
+                            "uuid": "60d44621-8e9c-4620-9b03-85cf706953c9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol BT1 Pin 1 [+, Passive, Line]",
+                            "pos": {
+                                "x": 60.0,
+                                "y": 194.92
+                            },
+                            "uuid": "c8f7cd02-4a5f-48b3-8478-f3d2177f5ea6"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 60.0,
+                                "y": 194.92
+                            },
+                            "uuid": "eb37db6f-f012-4ea6-8471-d9af5579a6b0"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol BT1 [Battery_Cell]",
+                            "pos": {
+                                "x": 60.0,
+                                "y": 200.0
+                            },
+                            "uuid": "8f1b084e-9c4f-4be1-9c12-e3dc20466f95"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 60.0,
+                                "y": 202.54
+                            },
+                            "uuid": "79a490a0-dad2-4182-887e-dec7ca8231bc"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 60.0,
+                                "y": 232.38
+                            },
+                            "uuid": "435a4fd6-a82d-44fb-bd8f-3d07197d11fe"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Obecna konfiguracja nie zawiera biblioteki footprintów 'Package_TO_SOT_SMD'",
+                    "items": [
+                        {
+                            "description": "Symbol U2 [MCP73831-2-OT]",
+                            "pos": {
+                                "x": 60.0,
+                                "y": 240.0
+                            },
+                            "uuid": "24731c08-09aa-41b9-bc84-c5796fcab2fc"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'Battery_Management'",
+                    "items": [
+                        {
+                            "description": "Symbol U2 [MCP73831-2-OT]",
+                            "pos": {
+                                "x": 60.0,
+                                "y": 240.0
+                            },
+                            "uuid": "24731c08-09aa-41b9-bc84-c5796fcab2fc"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 60.0,
+                                "y": 247.62
+                            },
+                            "uuid": "9c6bd48d-36f7-4143-990e-c696024ecb8b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol R5 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 60.0,
+                                "y": 271.19
+                            },
+                            "uuid": "1b87a28d-e4b0-447f-82ba-20bd974d9688"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 60.0,
+                                "y": 271.19
+                            },
+                            "uuid": "93b0377a-152f-4eac-9f21-2d66ff035429"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R5 [R]",
+                            "pos": {
+                                "x": 60.0,
+                                "y": 275.0
+                            },
+                            "uuid": "7d734f6c-b686-4746-8cc2-ecc1322248b9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 60.0,
+                                "y": 278.81
+                            },
+                            "uuid": "04ef6e5a-a3b6-418a-8910-5df01de7b4c6"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 60.0,
+                                "y": 297.38
+                            },
+                            "uuid": "2efc408b-64a8-4a31-818b-4368d3f89645"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol D2 [D_Bridge_+-AA]",
+                            "pos": {
+                                "x": 60.0,
+                                "y": 305.0
+                            },
+                            "uuid": "14d188e1-32df-4ce3-94b1-e1f500c6fac9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 60.0,
+                                "y": 312.62
+                            },
+                            "uuid": "482c57ea-7c10-43d7-9f59-5ba05bce178f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Poziome połączenie, długość 5.08 mm",
+                            "pos": {
+                                "x": 67.62,
+                                "y": 305.0
+                            },
+                            "uuid": "38c1b5d8-34a1-4d27-8216-f80065b266c6"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol D2 Pin 1 [+, Passive, Line]",
+                            "pos": {
+                                "x": 67.62,
+                                "y": 305.0
+                            },
+                            "uuid": "dc6dd904-cd48-4060-877b-c05216b1dce5"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Poziome połączenie, długość 5.08 mm",
+                            "pos": {
+                                "x": 70.16,
+                                "y": 237.46
+                            },
+                            "uuid": "d6073b77-6801-416d-b908-ae31ff5e0457"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol U2 Pin 1 [STAT, Tri-state, Line]",
+                            "pos": {
+                                "x": 70.16,
+                                "y": 242.54
+                            },
+                            "uuid": "24044dc3-22b5-423b-81c5-a850da11da61"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol R1 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 100.0,
+                                "y": 86.19
+                            },
+                            "uuid": "42934de2-21d2-4ed3-80a5-6f3182c629f3"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 100.0,
+                                "y": 86.19
+                            },
+                            "uuid": "777e9f82-8dd9-4867-bff9-067b7e72c456"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R1 [R]",
+                            "pos": {
+                                "x": 100.0,
+                                "y": 90.0
+                            },
+                            "uuid": "6300faa2-e963-4b9f-a165-acf2b23f3893"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 100.0,
+                                "y": 93.81
+                            },
+                            "uuid": "2b655bee-97be-4bc6-8677-af53d108c544"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol R2 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 100.0,
+                                "y": 116.19
+                            },
+                            "uuid": "48fa2e16-6584-4448-a8c6-9dda920072a4"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 100.0,
+                                "y": 116.19
+                            },
+                            "uuid": "abfd2989-2f13-45fd-8088-7d0dee989afc"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R2 [R]",
+                            "pos": {
+                                "x": 100.0,
+                                "y": 120.0
+                            },
+                            "uuid": "fd055e4e-3e74-41c7-8df7-430343cc10a2"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 100.0,
+                                "y": 123.81
+                            },
+                            "uuid": "f9db2fad-4c83-4102-967c-f05226ca3f84"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 100.0,
+                                "y": 146.19
+                            },
+                            "uuid": "910eb846-b2b1-4640-ae47-85b5ee8506cb"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol R3 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 100.0,
+                                "y": 146.19
+                            },
+                            "uuid": "b0500a1e-2988-464d-b212-2bdfbe9ecab9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol R3 [R]",
+                            "pos": {
+                                "x": 100.0,
+                                "y": 150.0
+                            },
+                            "uuid": "b2d1373d-08b3-4002-9c64-1d27748db911"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 100.0,
+                                "y": 153.81
+                            },
+                            "uuid": "5edcef74-c0cf-44a1-ad03-8d1394981281"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C5 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 110.0,
+                                "y": 301.19
+                            },
+                            "uuid": "25cc7a4d-e305-49ca-a9cb-f399d45f5927"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 110.0,
+                                "y": 301.19
+                            },
+                            "uuid": "d4b08642-9489-4cfd-9aa9-a4ed11215d13"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C5 [C]",
+                            "pos": {
+                                "x": 110.0,
+                                "y": 305.0
+                            },
+                            "uuid": "43fe9ea6-52f9-4b2b-9732-2bc263800e6d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 110.0,
+                                "y": 308.81
+                            },
+                            "uuid": "d5012981-02f4-4449-a091-a6193038e7c5"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Etykieta globalna 'ISP_RX'",
+                            "pos": {
+                                "x": 132.22,
+                                "y": 84.92
+                            },
+                            "uuid": "f9499a96-790b-441d-8b99-c5c440470d2b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Label connected to only one pin",
+                    "items": [
+                        {
+                            "description": "Etykieta globalna 'ISP_TX'",
+                            "pos": {
+                                "x": 132.22,
+                                "y": 87.46
+                            },
+                            "uuid": "eaa1b722-5670-4ff8-a315-5a046110de7f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "isolated_pin_label"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 5 [P3.0/RXD, Bidirectional, Line]",
+                            "pos": {
+                                "x": 137.3,
+                                "y": 84.92
+                            },
+                            "uuid": "91fc3c56-7e6b-4940-bf07-066a1271a3c4"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Poziome połączenie, długość 5.08 mm",
+                            "pos": {
+                                "x": 137.3,
+                                "y": 84.92
+                            },
+                            "uuid": "c6e64045-5568-4cc6-a5fb-3b50382f5ba0"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Poziome połączenie, długość 5.08 mm",
+                            "pos": {
+                                "x": 137.3,
+                                "y": 87.46
+                            },
+                            "uuid": "57f2afbb-4c25-4318-a79c-88a069e5c23b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Poziome połączenie, długość 5.08 mm",
+                            "pos": {
+                                "x": 137.3,
+                                "y": 90.0
+                            },
+                            "uuid": "191a36fc-eb3c-4beb-a9f6-9110f182d2dd"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Poziome połączenie, długość 5.08 mm",
+                            "pos": {
+                                "x": 137.3,
+                                "y": 92.54
+                            },
+                            "uuid": "149e944d-0fa8-452c-9a27-cdd26265e87b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 150.0,
+                                "y": 77.3
+                            },
+                            "uuid": "fe3e1f57-d8ed-4fac-9cb0-d5e72de582c4"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Obecna konfiguracja nie zawiera biblioteki footprintów 'Package_SO'",
+                    "items": [
+                        {
+                            "description": "Symbol U1 [STC8G1K08A]",
+                            "pos": {
+                                "x": 150.0,
+                                "y": 90.0
+                            },
+                            "uuid": "8aacbdb9-9544-4e5d-af5d-6a7c20378548"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "footprint_link_issues"
+                },
+                {
+                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'swiecaca-kulka'",
+                    "items": [
+                        {
+                            "description": "Symbol U1 [STC8G1K08A]",
+                            "pos": {
+                                "x": 150.0,
+                                "y": 90.0
+                            },
+                            "uuid": "8aacbdb9-9544-4e5d-af5d-6a7c20378548"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 150.0,
+                                "y": 102.7
+                            },
+                            "uuid": "2153a7fa-4747-4453-8d83-8e99d6784c52"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C2 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 150.0,
+                                "y": 146.19
+                            },
+                            "uuid": "4a95f3c7-7be5-4e3c-b64c-be93f82b236d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 150.0,
+                                "y": 146.19
+                            },
+                            "uuid": "818de2cd-cacc-4afe-918a-7782d5897cb4"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C2 [C]",
+                            "pos": {
+                                "x": 150.0,
+                                "y": 150.0
+                            },
+                            "uuid": "24c2e9ae-cb7c-436c-8422-2373206ecd20"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 150.0,
+                                "y": 153.81
+                            },
+                            "uuid": "f5d14af1-2683-4049-a139-a2abdac6c379"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Poziome połączenie, długość 5.08 mm",
+                            "pos": {
+                                "x": 162.7,
+                                "y": 87.46
+                            },
+                            "uuid": "da681955-cb86-4998-b5cf-b6fd4c367db7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Poziome połączenie, długość 5.08 mm",
+                            "pos": {
+                                "x": 162.7,
+                                "y": 90.0
+                            },
+                            "uuid": "8c0de3ba-2831-414d-a390-7bc080b84512"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 170.0,
+                                "y": 146.19
+                            },
+                            "uuid": "7fdc02da-35d1-48ab-87f2-a7a32c66e921"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C3 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 170.0,
+                                "y": 146.19
+                            },
+                            "uuid": "9b3f97c2-1af1-47cc-82ef-8fc537980a40"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C3 [C]",
+                            "pos": {
+                                "x": 170.0,
+                                "y": 150.0
+                            },
+                            "uuid": "ef086050-8069-4a7a-a981-6ba457f1b3e1"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 170.0,
+                                "y": 153.81
+                            },
+                            "uuid": "28fe74c0-536e-4f9b-bf91-32689166aecd"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C4 Pin 1 [Passive, Line]",
+                            "pos": {
+                                "x": 190.0,
+                                "y": 146.19
+                            },
+                            "uuid": "4f5f3866-800b-42bb-83d0-beb5628ff048"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 190.0,
+                                "y": 146.19
+                            },
+                            "uuid": "85ba65cd-9531-4eb7-99e3-5bb0c12d79d4"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol C4 [C]",
+                            "pos": {
+                                "x": 190.0,
+                                "y": 150.0
+                            },
+                            "uuid": "b96d1ecb-ec89-466a-9ec6-680e145daa9d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 190.0,
+                                "y": 153.81
+                            },
+                            "uuid": "297d46f9-e2ac-4451-9e6e-2d5b0b74d5f2"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Poziome połączenie, długość 5.08 mm",
+                            "pos": {
+                                "x": 234.92,
+                                "y": 120.0
+                            },
+                            "uuid": "048c8810-6e92-4e21-beb1-296e3033f3c4"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'Device'",
+                    "items": [
+                        {
+                            "description": "Symbol D1 [LED_RGBK]",
+                            "pos": {
+                                "x": 240.0,
+                                "y": 120.0
+                            },
+                            "uuid": "57bec766-b7b0-4985-aeda-fd35e34c9a9c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol D1 Pin 1 [RA, Passive, Line]",
+                            "pos": {
+                                "x": 245.08,
+                                "y": 114.92
+                            },
+                            "uuid": "06a0505d-0727-4d27-a08e-633b9de8c3c0"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Poziome połączenie, długość 5.08 mm",
+                            "pos": {
+                                "x": 245.08,
+                                "y": 114.92
+                            },
+                            "uuid": "73df7ae6-2f02-473e-8d92-044b6fcd00be"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Poziome połączenie, długość 5.08 mm",
+                            "pos": {
+                                "x": 245.08,
+                                "y": 120.0
+                            },
+                            "uuid": "ab8122ac-fd22-4a70-8dfc-1d77fec3b0f2"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Poziome połączenie, długość 5.08 mm",
+                            "pos": {
+                                "x": 245.08,
+                                "y": 125.08
+                            },
+                            "uuid": "9ada5fb2-3e0f-4f0a-a37f-72fc6eb92723"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #FLG01 Pin 1 [Power output, Line]",
+                            "pos": {
+                                "x": 300.0,
+                                "y": 90.0
+                            },
+                            "uuid": "0205c26b-f663-4799-aae0-d41323830432"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 300.0,
+                                "y": 90.0
+                            },
+                            "uuid": "87c76955-415e-417a-a597-305da08bf1a9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'power'",
+                    "items": [
+                        {
+                            "description": "Symbol #FLG01 [PWR_FLAG]",
+                            "pos": {
+                                "x": 300.0,
+                                "y": 90.0
+                            },
+                            "uuid": "a9ad2856-60ef-431e-a5a4-9ba6a7458348"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #FLG02 Pin 1 [Power output, Line]",
+                            "pos": {
+                                "x": 300.0,
+                                "y": 110.0
+                            },
+                            "uuid": "a4c39399-66a8-4eee-af0c-914f198b55a0"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Połączenie pionowe, długość 5.08 mm",
+                            "pos": {
+                                "x": 300.0,
+                                "y": 110.0
+                            },
+                            "uuid": "a5dae6a6-7efe-4e02-9b2e-6b22ffc6a86e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'power'",
+                    "items": [
+                        {
+                            "description": "Symbol #FLG02 [PWR_FLAG]",
+                            "pos": {
+                                "x": 300.0,
+                                "y": 110.0
+                            },
+                            "uuid": "038a0842-fe52-4525-a7e4-6a14cd2d7d06"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                }
+            ]
+        }
+    ],
+    "source": "swiecaca-kulka.kicad_sch"
+}

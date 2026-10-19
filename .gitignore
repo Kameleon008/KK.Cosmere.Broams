@@ -16,20 +16,30 @@ venv/
 .ipynb_checkpoints/
 
 # --- KiCad ---
-# Pliki tymczasowe i kopie zapasowe KiCad
+# Ustawienia lokalne i cache (NIE commitować)
 *.kicad_prl
+*.kicad_prl.lck
 fp-info-cache
+# Kopie zapasowe, autosave i pliki blokad
 *-backups/
+*-bak
 *.bak
+*.bak-*          # kopie tworzone przez serwer MCP kicad
 *.bck
-*.kicad_sch-bak
-*.kicad_pcb-bak
+_autosave-*
+*-autosave
+*.autosave
 *.lck
+~*.lck
+# Lokalna historia edytora
+.history/
 # Lokalne biblioteki cache / pobrane pakiety 3D
 *.3dshapes/
 # Rozpakowane biblioteki (pozostają na dysku, nie w repo)
 libs/
 packages3d/
+# UWAGA: commitować pliki źródłowe i ustawienia projektu:
+#   *.kicad_pro  *.kicad_sch  *.kicad_pcb  *.kicad_sym  *.kicad_mod  *.kicad_wks
 
 # --- Wyniki symulacji i eksporty (duże pliki binarne) ---
 simulation/**/*.raw
