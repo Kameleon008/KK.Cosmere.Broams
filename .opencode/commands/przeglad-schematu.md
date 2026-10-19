@@ -1,6 +1,6 @@
 ---
 description: Przegląda schemat i PCB projektu (walidacja, ERC/DRC, lista kontrolna) i raportuje problemy
-agent: elektronik-mechatronik
+agent: Engineer
 ---
 
 Przeprowadź przegląd projektu: `$ARGUMENTS` (ścieżka do katalogu projektu w

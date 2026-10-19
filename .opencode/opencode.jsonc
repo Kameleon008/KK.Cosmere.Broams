@@ -1,11 +1,26 @@
 {
   "$schema": "https://opencode.ai/config.json",
 
-  // Domyślny agent w tym projekcie — nowe sesje startują jako elektronik/mechatronik.
-  "default_agent": "elektronik-mechatronik",
+  // Zakres: WYŁĄCZNIE to repozytorium. Plik leży w .opencode/, więc działa
+  // tylko tutaj — nie zmienia konfiguracji globalnej (~/.config/opencode/)
+  // ani innych projektów. Agent Engineer, skille i komendy są projektowe.
+  // ---------------------------------------------------------------------------
+
+  // Domyślny agent w tym projekcie — nowe sesje startują jako Engineer.
+  "default_agent": "Engineer",
 
   // ---------------------------------------------------------------------------
-  // Serwery MCP — narzędzia dla agenta elektronika/mechatronika
+  // Polityki — w tym projekcie działa wyłącznie serwer MCP kicad.
+  // Reguła szeroka (deny) jest na początku, wyjątek (allow) na końcu —
+  // wygrywa ostatnia pasująca reguła. Kolejność: najpierw szeroko, potem wyjątki.
+  // ---------------------------------------------------------------------------
+  "policies": [
+    { "action": "integration.use", "resource": "mcp:*", "effect": "deny" },
+    { "action": "integration.use", "resource": "mcp:kicad", "effect": "allow" }
+  ],
+
+  // ---------------------------------------------------------------------------
+  // Serwery MCP — jedyne narzędzia zewnętrzne dopuszczone w tym projekcie
   // ---------------------------------------------------------------------------
   "mcp": {
     "timeout": {

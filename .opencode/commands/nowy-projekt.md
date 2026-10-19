@@ -1,6 +1,6 @@
 ---
 description: Zakłada nowy projekt sprzętowy w hardware/<nazwa> razem z dokumentacją wymagań
-agent: elektronik-mechatronik
+agent: Engineer
 ---
 
 Utwórz nowy projekt sprzętowy. Argumenty: `$ARGUMENTS`

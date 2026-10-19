@@ -35,7 +35,7 @@ albo **wyraźnie oznacz jako do zmierzenia**. Wynik zapisuj w
 | Przetwornica buck | `L = (Vin−Vout)·D/(ΔI_L·f_sw)`, `D = Vout/Vin` |
 | Ripple wyjściowy buck | `ΔVout ≈ ΔI_L·(ESR + 1/(8·f_sw·C))` |
 | Nagrzewanie | `ΔT = P · R_th` (R_th = R_th(j-c) + R_th(c-a)) |
-| Ładowanie baterii CC/CV | `t_CC ≈ C·(V_cc − V_min)/I`, potem CV |
+| Ładowanie baterii Li-Ion CC/CV | faza CC: `t_CC ≈ 0,75·C / I_CC`, całość licz ×1,3 (faza CV) |
 | Energia w cewce | `E = ½·L·I²` |
 
 Bardziej rozbudowane wzory i gotowe funkcje Pythona:
@@ -75,7 +75,7 @@ C1 mid 0 100n
 .tran 1u 5m                 ; przebiegi czasowe
 .ac dec 100 1 1Meg          ; charakterystyka częstotliwościowa
 .dc Vin 0 20 0.1            ; charakterystyka statyczna
-.meas tran Vout_max MAX V(out)
+.meas tran Vmid_max MAX V(mid)
 .end
 ```
 

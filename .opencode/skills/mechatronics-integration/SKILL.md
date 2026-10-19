@@ -1,7 +1,7 @@
 ---
 name: Integracja mechatroniczna
 description: >-
-  Dobór i sterowanie napędami (silniki DC, BLDC, krokowe, serwa), driver'y i mostki H,
+  Dobór i sterowanie napędami (silniki DC, BLDC, krokowe, serwa), drivery i mostki H,
   czujniki i enkodery, zasilanie silnoprądowe, BMS i baterie, masa/EMC w układach
   mechatronicznych oraz podstawy regulatora PID. Użyj przy projektach z ruchem,
   napędami, czujnikami i sterowaniem.
@@ -134,7 +134,7 @@ zasilania drivera, + 100 nF ceramiczny, + dioda zabezpieczająca od przepięć.
 
 - [ ] Bilans momentu policzony, silnik dobrany na `T_rms` z zapasem.
 - [ ] Driver dobrany na prąd szczytowy + przepięcia, `nFAULT` podłączony.
-- [ ] Kondensator bulk przy driverze, dioda/klamp od przepięć.
+- [ ] Kondensator bulk przy driverze, dioda i obwód tłumiący od przepięć.
 - [ ] Oddzielne szyny: moc i logika; jeden punkt łączenia mas.
 - [ ] Zabezpieczenie przed odwrotnym podłączeniem silnika.
 - [ ] BMS i ładowanie CC/CV dla baterii; pomiar napięcia ogniw.
@@ -142,7 +142,7 @@ zasilania drivera, + 100 nF ceramiczny, + dioda zabezpieczająca od przepięć.
 - [ ] Stan bezpieczny zdefiniowany i przetestowany przy błędzie.
 - [ ] Krańcówki jako zabezpieczenie; homing zaprojektowany.
 - [ ] Pętla sterowania spełnia `f_s ≥ 10 × pasmo`, anty-windup działa.
-- [ ] Tabele testów z stołu w `docs/`; ryzyka i następne kroki wypisane.
+- [ ] Tabele testów ze stołu w `docs/`; ryzyka i następne kroki wypisane.
 
 ## Typowe pułapki
 

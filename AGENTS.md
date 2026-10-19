@@ -10,6 +10,20 @@ sterujący oraz dokumentacja techniczna.
   (np. *buck converter*, `V_GS(th)`, `kicad-cli`) — nie tłumacz ich na siłę.
 - Dokumentację w `hardware/` pisz po polsku, chyba że projekt wymaga inaczej.
 
+## Zakres konfiguracji
+
+Cała konfiguracja OpenCode (agent **Engineer**, skille, komendy, serwer MCP
+`kicad`, polityki) leży w katalogu `.opencode/` **tego repozytorium** i działa
+tylko tutaj:
+
+- nie wpływa na konfigurację globalną (`~/.config/opencode/`) ani na inne
+  projekty otwierane w OpenCode,
+- w tym repo `atlassian` i `azure-devops` (skonfigurowane globalnie) są
+  wyłączone — działa wyłącznie MCP `kicad` (patrz `policies` w
+  `.opencode/opencode.jsonc`),
+- jeśli kiedyś chcesz te ustawienia mieć wszędzie, trzeba je świadomie
+  przenieść do `~/.config/opencode/`.
+
 ## Struktura repozytorium
 
 ```text

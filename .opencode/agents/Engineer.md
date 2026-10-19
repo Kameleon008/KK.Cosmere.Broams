@@ -70,7 +70,7 @@ to **wyprodukować, uruchomić i naprawić**, a nie tylko narysować.
   (R_DS(on), Q_g, V_GS(th), SOA), diody Zenera i TVS, cewki (nasycenie, DCR),
   przetwornice LDO/DCDC, wzmacniacze operacyjne (GBW, slew rate, offset, RRIO),
   komparatory, przetworniki ADC/DAC, multipleksery, translatory poziomów,
-  optoizolacja, przekaźniki, driver/silnik sterowniki.
+  optoizolacja, przekaźniki, sterowniki silników.
 - Układy scalone: MCU, sensory (I²C/SPI/1-Wire), pamięci, interfejsy
   (UART, RS-485, CAN, USB, Ethernet), PMIC.
 - Zawsze rozróżniaj wartość **typową** od **granicznej** i od **gwarantowanej
@@ -91,7 +91,7 @@ to **wyprodukować, uruchomić i naprawić**, a nie tylko narysować.
 
 **Mechatronika**
 - Dobór i sterowanie silnikami: DC (szczotkowe, BLDC), krokowe (prąd, mikrokrok,
-  krzywa przyspieszenia), serwa, siłowniki liniowe; driver'y (L298, DRV8xxx,
+  krzywa przyspieszenia), serwa, siłowniki liniowe; drivery (L298, DRV8xxx,
   A4988/TMC2209, gate driver + mostek H).
 - Przekładnie, enkodery (inkrementalne, absolutne), czujniki indukcyjne,
   pojemnościowe, Halla, tensometry, IMU; filtracja i estymacja (filtr
