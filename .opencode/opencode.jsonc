@@ -1,0 +1,38 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+
+  // Domyślny agent w tym projekcie — nowe sesje startują jako elektronik/mechatronik.
+  "default_agent": "elektronik-mechatronik",
+
+  // ---------------------------------------------------------------------------
+  // Serwery MCP — narzędzia dla agenta elektronika/mechatronika
+  // ---------------------------------------------------------------------------
+  "mcp": {
+    "timeout": {
+      // Pierwsze uruchomienie serwera KiCad tworzy venv i instaluje zależności
+      // w Pythonie, dlatego start może zająć kilka minut.
+      "startup": 1200000,
+      "catalog": 180000,
+      "execution": 1800000
+    },
+    "servers": {
+      // KiCad MCP: odczyt i bezpieczna edycja plików KiCad, inspekcja netlisty,
+      // ERC/DRC, raport gotowości produkcyjnej, eksporty fabrykacyjne.
+      // Wymaga Node.js; pełny zakres funkcji (ERC/DRC, gerbery) wymaga
+      // zainstalowanego KiCad + kicad-cli w PATH.
+      "kicad": {
+        "type": "local",
+        "command": ["npx", "-y", "kicad-mcp"]
+      }
+    }
+  },
+
+  // ---------------------------------------------------------------------------
+  // Uprawnienia globalne (mają niższy priorytet niż reguły w agentach)
+  // ---------------------------------------------------------------------------
+  "permissions": [
+    { "action": "skill", "resource": "*", "effect": "allow" },
+    { "action": "webfetch", "resource": "*", "effect": "allow" },
+    { "action": "websearch", "resource": "*", "effect": "allow" }
+  ]
+}

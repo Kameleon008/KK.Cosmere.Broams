@@ -1,0 +1,56 @@
+# --- Systemy / edytory ---
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+.idea/
+.vscode/
+
+# --- Node / Python (narzędzia agenta, tscircuit, skrypty analizy) ---
+node_modules/
+.pnpm-store/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# --- KiCad ---
+# Pliki tymczasowe i kopie zapasowe KiCad
+*.kicad_prl
+fp-info-cache
+*-backups/
+*.bak
+*.bck
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*.lck
+# Lokalne biblioteki cache / pobrane pakiety 3D
+*.3dshapes/
+# Rozpakowane biblioteki (pozostają na dysku, nie w repo)
+libs/
+packages3d/
+
+# --- Wyniki symulacji i eksporty (duże pliki binarne) ---
+simulation/**/*.raw
+simulation/**/*.log
+simulation/**/*.out
+**/*.spice.raw
+exports/
+gerbers/
+*.gbr
+*.drl
+*.zip
+
+# --- Sekrety / dane lokalne ---
+.env
+.env.*
+!.env.example
+secrets/
+*.secret
+
+# --- Duże pliki ---
+*.step
+*.stp
+*.stl
+*.iges
