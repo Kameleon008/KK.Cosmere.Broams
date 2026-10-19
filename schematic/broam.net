@@ -1,8 +1,8 @@
 (export
 	(version "E")
 	(design
-		(source "C:\\Users\\Krzysztof\\Desktop\\Cosmere\\hardware\\swiecaca-kulka\\schematic\\swiecaca-kulka.kicad_sch")
-		(date "2026-10-19T18:20:03")
+		(source "C:\\Users\\Krzysztof\\Desktop\\KK.Cosmere.Broams\\schematic\\broam.kicad_sch")
+		(date "2026-10-19T19:09:44")
 		(tool "Eeschema 10.0.7")
 		(sheet
 			(number "1")
@@ -13,7 +13,7 @@
 				(company)
 				(rev)
 				(date)
-				(source "swiecaca-kulka.kicad_sch")
+				(source "broam.kicad_sch")
 				(comment
 					(number "1")
 					(value "")
@@ -99,11 +99,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "broam")
 			)
 			(property
 				(name "Sheetfile")
-				(value "../../../../../../../../Desktop/Cosmere/hardware/swiecaca-kulka/schematic/swiecaca-kulka.kicad_sch")
+				(value "broam.kicad_sch")
 			)
 			(property
 				(name "ki_keywords")
@@ -161,11 +161,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "broam")
 			)
 			(property
 				(name "Sheetfile")
-				(value "../../../../../../../../Desktop/Cosmere/hardware/swiecaca-kulka/schematic/swiecaca-kulka.kicad_sch")
+				(value "broam.kicad_sch")
 			)
 			(property
 				(name "ki_keywords")
@@ -227,11 +227,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "broam")
 			)
 			(property
 				(name "Sheetfile")
-				(value "../../../../../../../../Desktop/Cosmere/hardware/swiecaca-kulka/schematic/swiecaca-kulka.kicad_sch")
+				(value "broam.kicad_sch")
 			)
 			(property
 				(name "ki_keywords")
@@ -293,11 +293,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "broam")
 			)
 			(property
 				(name "Sheetfile")
-				(value "../../../../../../../../Desktop/Cosmere/hardware/swiecaca-kulka/schematic/swiecaca-kulka.kicad_sch")
+				(value "broam.kicad_sch")
 			)
 			(property
 				(name "ki_keywords")
@@ -359,11 +359,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "broam")
 			)
 			(property
 				(name "Sheetfile")
-				(value "../../../../../../../../Desktop/Cosmere/hardware/swiecaca-kulka/schematic/swiecaca-kulka.kicad_sch")
+				(value "broam.kicad_sch")
 			)
 			(property
 				(name "ki_keywords")
@@ -425,11 +425,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "broam")
 			)
 			(property
 				(name "Sheetfile")
-				(value "../../../../../../../../Desktop/Cosmere/hardware/swiecaca-kulka/schematic/swiecaca-kulka.kicad_sch")
+				(value "broam.kicad_sch")
 			)
 			(property
 				(name "ki_keywords")
@@ -491,11 +491,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "broam")
 			)
 			(property
 				(name "Sheetfile")
-				(value "../../../../../../../../Desktop/Cosmere/hardware/swiecaca-kulka/schematic/swiecaca-kulka.kicad_sch")
+				(value "broam.kicad_sch")
 			)
 			(property
 				(name "ki_keywords")
@@ -563,11 +563,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "broam")
 			)
 			(property
 				(name "Sheetfile")
-				(value "../../../../../../../../Desktop/Cosmere/hardware/swiecaca-kulka/schematic/swiecaca-kulka.kicad_sch")
+				(value "broam.kicad_sch")
 			)
 			(property
 				(name "ki_keywords")
@@ -635,11 +635,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "broam")
 			)
 			(property
 				(name "Sheetfile")
-				(value "../../../../../../../../Desktop/Cosmere/hardware/swiecaca-kulka/schematic/swiecaca-kulka.kicad_sch")
+				(value "broam.kicad_sch")
 			)
 			(property
 				(name "ki_keywords")
@@ -695,11 +695,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "broam")
 			)
 			(property
 				(name "Sheetfile")
-				(value "../../../../../../../../Desktop/Cosmere/hardware/swiecaca-kulka/schematic/swiecaca-kulka.kicad_sch")
+				(value "broam.kicad_sch")
 			)
 			(property
 				(name "ki_keywords")
@@ -757,11 +757,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "broam")
 			)
 			(property
 				(name "Sheetfile")
-				(value "../../../../../../../../Desktop/Cosmere/hardware/swiecaca-kulka/schematic/swiecaca-kulka.kicad_sch")
+				(value "broam.kicad_sch")
 			)
 			(property
 				(name "ki_keywords")
@@ -823,11 +823,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "broam")
 			)
 			(property
 				(name "Sheetfile")
-				(value "../../../../../../../../Desktop/Cosmere/hardware/swiecaca-kulka/schematic/swiecaca-kulka.kicad_sch")
+				(value "broam.kicad_sch")
 			)
 			(property
 				(name "ki_keywords")
@@ -889,11 +889,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "broam")
 			)
 			(property
 				(name "Sheetfile")
-				(value "../../../../../../../../Desktop/Cosmere/hardware/swiecaca-kulka/schematic/swiecaca-kulka.kicad_sch")
+				(value "broam.kicad_sch")
 			)
 			(property
 				(name "ki_keywords")
@@ -955,11 +955,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "broam")
 			)
 			(property
 				(name "Sheetfile")
-				(value "../../../../../../../../Desktop/Cosmere/hardware/swiecaca-kulka/schematic/swiecaca-kulka.kicad_sch")
+				(value "broam.kicad_sch")
 			)
 			(property
 				(name "ki_keywords")
@@ -1021,11 +1021,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "broam")
 			)
 			(property
 				(name "Sheetfile")
-				(value "../../../../../../../../Desktop/Cosmere/hardware/swiecaca-kulka/schematic/swiecaca-kulka.kicad_sch")
+				(value "broam.kicad_sch")
 			)
 			(property
 				(name "ki_keywords")
@@ -1057,29 +1057,29 @@
 		(comp
 			(ref "U1")
 			(value "STC8G1K08A")
-			(footprint "Package_SO:SOP-8_3.9x4.9mm_P1.27mm")
+			(footprint "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm")
 			(datasheet "~")
 			(description "1T 8051 MCU, 1.9-5.5V, 8K flash, 10-bit ADC, 3x PCA/PWM, SOP-8")
 			(fields
 				(field
-					(name "Footprint") "Package_SO:SOP-8_3.9x4.9mm_P1.27mm")
+					(name "Footprint") "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm")
 				(field
 					(name "Datasheet") "~")
 				(field
 					(name "Description") "1T 8051 MCU, 1.9-5.5V, 8K flash, 10-bit ADC, 3x PCA/PWM, SOP-8")
 			)
 			(libsource
-				(lib "swiecaca-kulka")
+				(lib "broam")
 				(part "STC8G1K08A")
 				(description "1T 8051 MCU, 1.9-5.5V, 8K flash, 10-bit ADC, 3x PCA/PWM, SOP-8")
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "broam")
 			)
 			(property
 				(name "Sheetfile")
-				(value "../../../../../../../../Desktop/Cosmere/hardware/swiecaca-kulka/schematic/swiecaca-kulka.kicad_sch")
+				(value "broam.kicad_sch")
 			)
 			(sheetpath
 				(names "/")
@@ -1151,11 +1151,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "broam")
 			)
 			(property
 				(name "Sheetfile")
-				(value "../../../../../../../../Desktop/Cosmere/hardware/swiecaca-kulka/schematic/swiecaca-kulka.kicad_sch")
+				(value "broam.kicad_sch")
 			)
 			(property
 				(name "ki_keywords")
@@ -1510,19 +1510,19 @@
 			)
 		)
 		(libpart
-			(lib "swiecaca-kulka")
+			(lib "broam")
 			(part "STC8G1K08A")
 			(description "1T 8051 MCU, 1.9-5.5V, 8K flash, 10-bit ADC, 3x PCA/PWM, SOP-8")
-			(docs "~")
 			(fields
 				(field
 					(name "Reference") "U")
 				(field
 					(name "Value") "STC8G1K08A")
 				(field
-					(name "Footprint") "Package_SO:SOP-8_3.9x4.9mm_P1.27mm")
+					(name "Footprint") "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm")
 				(field
-					(name "Datasheet") "~")
+					(name "Datasheet")
+				)
 				(field
 					(name "Description") "1T 8051 MCU, 1.9-5.5V, 8K flash, 10-bit ADC, 3x PCA/PWM, SOP-8")
 			)
@@ -1570,7 +1570,20 @@
 			)
 		)
 	)
-	(libraries)
+	(libraries
+		(library
+			(logical "Battery_Management")
+			(uri "${KICAD10_SYMBOL_DIR}/Battery_Management.kicad_sym")
+		)
+		(library
+			(logical "Device")
+			(uri "${KICAD10_SYMBOL_DIR}/Device.kicad_sym")
+		)
+		(library
+			(logical "broam")
+			(uri "${KIPRJMOD}/broam.kicad_sym")
+		)
+	)
 	(nets
 		(net
 			(code "1")

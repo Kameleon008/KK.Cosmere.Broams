@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""swiecaca-kulka - bilans energii, dobór zasilania i timera.
+"""broam - bilans energii, dobór zasilania i timera.
 
-Założenia (patrz docs/README.md):
-- kulka Ø20 mm, wnęka użytkowa ~Ø16 mm (ścianka żywicy 2 mm)
+Założenia (patrz README.md):
+- broam Ø20 mm, wnęka użytkowa ~Ø16 mm (ścianka żywicy 2 mm)
 - LED świeci T_on = 15 min po triggerze (wstrząs)
 - wartości ogniw są TYPOWE (z not katalogowych) - do weryfikacji u dostawcy
 
@@ -110,5 +110,5 @@ for name in ("czerwona 1 mA", "biala 1 mA", "biala 2 mA", "biala 5 mA"):
     ok = "OK" if i <= i_max_cont else "PRZEKROCZONY"
     print(f"  {name:>14}: I_F={i*1e3:.0f} mA -> {ok} (limit {i_max_cont*1e3:.1f} mA)")
 print("  => dla CR1220 trzymaj I_F <= ~1 mA; wiekszy prad wymaga ogniwa o wiekszym")
-print("     dopuszczalnym pradzie (np. LiPo/Li-ion) lub wiekszej srednicy kulki")
-print("     (CR2032 Ø20 mm NIE wejdzie do kulki Ø20 mm).")
+print("     dopuszczalnym pradzie (np. LiPo/Li-ion) lub wiekszej srednicy broama")
+print("     (CR2032 Ø20 mm NIE wejdzie do broama Ø20 mm).")

@@ -130,7 +130,7 @@ to **wyprodukować, uruchomić i naprawić**, a nie tylko narysować.
 1. **Zbierz wymagania** — napięcia zasilania, prądy, sygnały we/wy, środowisko,
    budżet, obudowa, certyfikaty. Braki wypisz jako jawnie *założone*.
 2. **Schemat blokowy** — podział na bloki (zasilanie, MCU, wejścia, wyjścia,
-   napędy, komunikacja). Zapisz go w `hardware/<projekt>/docs/`.
+   napędy, komunikacja). Zapisz go w `docs/` (Architektura).
 3. **Dobór komponentów** — dla każdego bloku: propozycja + uzasadnienie
    parametrów + link do noty katalogowej. Zaznacz, co trzeba potwierdzić.
 4. **Obliczenia** — policz wartości krytyczne i zapisz je w `docs/`

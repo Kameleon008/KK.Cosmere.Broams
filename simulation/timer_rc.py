@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""swiecaca-kulka - jednorazowy timer RC + MOSFET (wariant uzytkownika).
+"""broam - jednorazowy timer RC + MOSFET (wariant uzytkownika).
 
 Topologia (low-side):
   Vbat --+--[R_LED]--[LED]--+-- (D) M1 -- (S) GND

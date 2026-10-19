@@ -1,7 +1,7 @@
 {
     "$schema": "https://schemas.kicad.org/erc.v1.json",
     "coordinate_units": "mm",
-    "date": "2026-10-19T18:19:58",
+    "date": "2026-10-19T19:12:58",
     "ignored_checks": [
         {
             "description": "Global label only appears once in the schematic",
@@ -62,21 +62,6 @@
                     "type": "endpoint_off_grid"
                 },
                 {
-                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'Device'",
-                    "items": [
-                        {
-                            "description": "Symbol L1 [L]",
-                            "pos": {
-                                "x": 25.0,
-                                "y": 240.0
-                            },
-                            "uuid": "b639eaea-9b83-46ef-b441-625d32007eb4"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
-                },
-                {
                     "description": "Symbol pin or wire end off connection grid",
                     "items": [
                         {
@@ -122,21 +107,6 @@
                     "type": "endpoint_off_grid"
                 },
                 {
-                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'Device'",
-                    "items": [
-                        {
-                            "description": "Symbol C1 [C]",
-                            "pos": {
-                                "x": 25.0,
-                                "y": 275.0
-                            },
-                            "uuid": "08254037-6544-4348-9632-9fedb0d07067"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
-                },
-                {
                     "description": "Symbol pin or wire end off connection grid",
                     "items": [
                         {
@@ -167,21 +137,6 @@
                     "type": "endpoint_off_grid"
                 },
                 {
-                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'Device'",
-                    "items": [
-                        {
-                            "description": "Symbol Q1 [Q_Photo_NPN]",
-                            "pos": {
-                                "x": 50.0,
-                                "y": 60.0
-                            },
-                            "uuid": "0c026274-95dc-4311-9b26-ec49ae160dfb"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
-                },
-                {
                     "description": "Symbol pin or wire end off connection grid",
                     "items": [
                         {
@@ -210,21 +165,6 @@
                     ],
                     "severity": "warning",
                     "type": "endpoint_off_grid"
-                },
-                {
-                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'Device'",
-                    "items": [
-                        {
-                            "description": "Symbol R4 [R]",
-                            "pos": {
-                                "x": 50.0,
-                                "y": 85.0
-                            },
-                            "uuid": "76e88386-eb6d-4fa1-a89d-839aa76b756d"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
                 },
                 {
                     "description": "Symbol pin or wire end off connection grid",
@@ -332,21 +272,6 @@
                     "type": "endpoint_off_grid"
                 },
                 {
-                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'Device'",
-                    "items": [
-                        {
-                            "description": "Symbol BT1 [Battery_Cell]",
-                            "pos": {
-                                "x": 60.0,
-                                "y": 200.0
-                            },
-                            "uuid": "8f1b084e-9c4f-4be1-9c12-e3dc20466f95"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
-                },
-                {
                     "description": "Symbol pin or wire end off connection grid",
                     "items": [
                         {
@@ -375,36 +300,6 @@
                     ],
                     "severity": "warning",
                     "type": "endpoint_off_grid"
-                },
-                {
-                    "description": "Obecna konfiguracja nie zawiera biblioteki footprintów 'Package_TO_SOT_SMD'",
-                    "items": [
-                        {
-                            "description": "Symbol U2 [MCP73831-2-OT]",
-                            "pos": {
-                                "x": 60.0,
-                                "y": 240.0
-                            },
-                            "uuid": "24731c08-09aa-41b9-bc84-c5796fcab2fc"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "footprint_link_issues"
-                },
-                {
-                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'Battery_Management'",
-                    "items": [
-                        {
-                            "description": "Symbol U2 [MCP73831-2-OT]",
-                            "pos": {
-                                "x": 60.0,
-                                "y": 240.0
-                            },
-                            "uuid": "24731c08-09aa-41b9-bc84-c5796fcab2fc"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
                 },
                 {
                     "description": "Symbol pin or wire end off connection grid",
@@ -452,21 +347,6 @@
                     "type": "endpoint_off_grid"
                 },
                 {
-                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'Device'",
-                    "items": [
-                        {
-                            "description": "Symbol R5 [R]",
-                            "pos": {
-                                "x": 60.0,
-                                "y": 275.0
-                            },
-                            "uuid": "7d734f6c-b686-4746-8cc2-ecc1322248b9"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
-                },
-                {
                     "description": "Symbol pin or wire end off connection grid",
                     "items": [
                         {
@@ -495,21 +375,6 @@
                     ],
                     "severity": "warning",
                     "type": "endpoint_off_grid"
-                },
-                {
-                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'Device'",
-                    "items": [
-                        {
-                            "description": "Symbol D2 [D_Bridge_+-AA]",
-                            "pos": {
-                                "x": 60.0,
-                                "y": 305.0
-                            },
-                            "uuid": "14d188e1-32df-4ce3-94b1-e1f500c6fac9"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
                 },
                 {
                     "description": "Symbol pin or wire end off connection grid",
@@ -617,21 +482,6 @@
                     "type": "endpoint_off_grid"
                 },
                 {
-                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'Device'",
-                    "items": [
-                        {
-                            "description": "Symbol R1 [R]",
-                            "pos": {
-                                "x": 100.0,
-                                "y": 90.0
-                            },
-                            "uuid": "6300faa2-e963-4b9f-a165-acf2b23f3893"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
-                },
-                {
                     "description": "Symbol pin or wire end off connection grid",
                     "items": [
                         {
@@ -675,21 +525,6 @@
                     ],
                     "severity": "warning",
                     "type": "endpoint_off_grid"
-                },
-                {
-                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'Device'",
-                    "items": [
-                        {
-                            "description": "Symbol R2 [R]",
-                            "pos": {
-                                "x": 100.0,
-                                "y": 120.0
-                            },
-                            "uuid": "fd055e4e-3e74-41c7-8df7-430343cc10a2"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
                 },
                 {
                     "description": "Symbol pin or wire end off connection grid",
@@ -737,21 +572,6 @@
                     "type": "endpoint_off_grid"
                 },
                 {
-                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'Device'",
-                    "items": [
-                        {
-                            "description": "Symbol R3 [R]",
-                            "pos": {
-                                "x": 100.0,
-                                "y": 150.0
-                            },
-                            "uuid": "b2d1373d-08b3-4002-9c64-1d27748db911"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
-                },
-                {
                     "description": "Symbol pin or wire end off connection grid",
                     "items": [
                         {
@@ -795,21 +615,6 @@
                     ],
                     "severity": "warning",
                     "type": "endpoint_off_grid"
-                },
-                {
-                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'Device'",
-                    "items": [
-                        {
-                            "description": "Symbol C5 [C]",
-                            "pos": {
-                                "x": 110.0,
-                                "y": 305.0
-                            },
-                            "uuid": "43fe9ea6-52f9-4b2b-9732-2bc263800e6d"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
                 },
                 {
                     "description": "Symbol pin or wire end off connection grid",
@@ -947,36 +752,6 @@
                     "type": "endpoint_off_grid"
                 },
                 {
-                    "description": "Obecna konfiguracja nie zawiera biblioteki footprintów 'Package_SO'",
-                    "items": [
-                        {
-                            "description": "Symbol U1 [STC8G1K08A]",
-                            "pos": {
-                                "x": 150.0,
-                                "y": 90.0
-                            },
-                            "uuid": "8aacbdb9-9544-4e5d-af5d-6a7c20378548"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "footprint_link_issues"
-                },
-                {
-                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'swiecaca-kulka'",
-                    "items": [
-                        {
-                            "description": "Symbol U1 [STC8G1K08A]",
-                            "pos": {
-                                "x": 150.0,
-                                "y": 90.0
-                            },
-                            "uuid": "8aacbdb9-9544-4e5d-af5d-6a7c20378548"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
-                },
-                {
                     "description": "Symbol pin or wire end off connection grid",
                     "items": [
                         {
@@ -1020,21 +795,6 @@
                     ],
                     "severity": "warning",
                     "type": "endpoint_off_grid"
-                },
-                {
-                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'Device'",
-                    "items": [
-                        {
-                            "description": "Symbol C2 [C]",
-                            "pos": {
-                                "x": 150.0,
-                                "y": 150.0
-                            },
-                            "uuid": "24c2e9ae-cb7c-436c-8422-2373206ecd20"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
                 },
                 {
                     "description": "Symbol pin or wire end off connection grid",
@@ -1112,21 +872,6 @@
                     "type": "endpoint_off_grid"
                 },
                 {
-                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'Device'",
-                    "items": [
-                        {
-                            "description": "Symbol C3 [C]",
-                            "pos": {
-                                "x": 170.0,
-                                "y": 150.0
-                            },
-                            "uuid": "ef086050-8069-4a7a-a981-6ba457f1b3e1"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
-                },
-                {
                     "description": "Symbol pin or wire end off connection grid",
                     "items": [
                         {
@@ -1172,21 +917,6 @@
                     "type": "endpoint_off_grid"
                 },
                 {
-                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'Device'",
-                    "items": [
-                        {
-                            "description": "Symbol C4 [C]",
-                            "pos": {
-                                "x": 190.0,
-                                "y": 150.0
-                            },
-                            "uuid": "b96d1ecb-ec89-466a-9ec6-680e145daa9d"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
-                },
-                {
                     "description": "Symbol pin or wire end off connection grid",
                     "items": [
                         {
@@ -1215,21 +945,6 @@
                     ],
                     "severity": "warning",
                     "type": "endpoint_off_grid"
-                },
-                {
-                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'Device'",
-                    "items": [
-                        {
-                            "description": "Symbol D1 [LED_RGBK]",
-                            "pos": {
-                                "x": 240.0,
-                                "y": 120.0
-                            },
-                            "uuid": "57bec766-b7b0-4985-aeda-fd35e34c9a9c"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
                 },
                 {
                     "description": "Symbol pin or wire end off connection grid",
@@ -1322,21 +1037,6 @@
                     "type": "endpoint_off_grid"
                 },
                 {
-                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'power'",
-                    "items": [
-                        {
-                            "description": "Symbol #FLG01 [PWR_FLAG]",
-                            "pos": {
-                                "x": 300.0,
-                                "y": 90.0
-                            },
-                            "uuid": "a9ad2856-60ef-431e-a5a4-9ba6a7458348"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
-                },
-                {
                     "description": "Symbol pin or wire end off connection grid",
                     "items": [
                         {
@@ -1365,24 +1065,9 @@
                     ],
                     "severity": "warning",
                     "type": "endpoint_off_grid"
-                },
-                {
-                    "description": "Obecna konfiguracja nie zawiera biblioteki symboli 'power'",
-                    "items": [
-                        {
-                            "description": "Symbol #FLG02 [PWR_FLAG]",
-                            "pos": {
-                                "x": 300.0,
-                                "y": 110.0
-                            },
-                            "uuid": "038a0842-fe52-4525-a7e4-6a14cd2d7d06"
-                        }
-                    ],
-                    "severity": "warning",
-                    "type": "lib_symbol_issues"
                 }
             ]
         }
     ],
-    "source": "swiecaca-kulka.kicad_sch"
+    "source": "broam.kicad_sch"
 }

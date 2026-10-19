@@ -12,7 +12,7 @@ description: >-
 
 Nie zgaduj wartości. Każdą wartość krytyczną albo **policz**, albo **zasymuluj**,
 albo **wyraźnie oznacz jako do zmierzenia**. Wynik zapisuj w
-`hardware/<projekt>/simulation/` (netlist + wynik) i w `docs/` (wniosek).
+`simulation/` (netlist + wynik) i w `docs/` (wniosek).
 
 ## Kolejność pracy
 
@@ -43,11 +43,11 @@ Bardziej rozbudowane wzory i gotowe funkcje Pythona:
 
 ## Obliczenia w Pythonie
 
-Zapisuj skrypt obok projektu, np. `hardware/<projekt>/simulation/obliczenia.py`,
+Zapisuj skrypt obok projektu, np. `simulation/obliczenia.py`,
 żeby wynik był odtwarzalny i wersjonowany:
 
 ```powershell
-python hardware\<projekt>\simulation\obliczenia.py
+python simulation\obliczenia.py
 ```
 
 W każdym skrypcie: jednostki SI w komentarzach, wynik z jednostką, zapas w %.

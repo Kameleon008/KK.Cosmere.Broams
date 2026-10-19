@@ -1,7 +1,7 @@
 # Obliczenia projektowe — ściągawka
 
 Gotowe wzory i funkcje Pythona. Kopiuj potrzebny fragment do
-`hardware/<projekt>/simulation/obliczenia.py` zamiast przepisywać z głowy.
+`simulation/obliczenia.py` zamiast przepisywać z głowy.
 Każdy wynik zaokrąglaj do wartości dostępnej w szeregu E24/E96 i dodawaj zapas.
 
 ## Nagłówek skryptu

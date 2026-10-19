@@ -5,7 +5,7 @@
 	(uuid "0a1b2c3d-4e5f-6071-8293-a4b5c6d7e8f9")
 	(paper "A3")
 	(lib_symbols
-		(symbol "swiecaca-kulka:STC8G1K08A"
+			(symbol "broam:STC8G1K08A"
 			(pin_names
 				(offset 1.016)
 			)
@@ -34,7 +34,7 @@
 					)
 				)
 			)
-			(property "Footprint" "Package_SO:SOP-8_3.9x4.9mm_P1.27mm"
+			(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 				(at 0 -15.24 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -45,7 +45,7 @@
 					)
 				)
 			)
-			(property "Datasheet" "~"
+			(property "Datasheet" ""
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -81,6 +81,78 @@
 				)
 			)
 			(symbol "STC8G1K08A_1_1"
+				(pin bidirectional line
+					(at 12.7 2.54 180)
+					(length 2.54)
+					(name "P5.4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 12.7 270)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at 12.7 0 180)
+					(length 2.54)
+					(name "P5.5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -12.7 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 				(pin bidirectional line
 					(at -12.7 5.08 0)
 					(length 2.54)
@@ -146,78 +218,6 @@
 						)
 					)
 					(number "8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 12.7 2.54 180)
-					(length 2.54)
-					(name "P5.4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin bidirectional line
-					(at 12.7 0 180)
-					(length 2.54)
-					(name "P5.5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "3"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 12.7 270)
-					(length 2.54)
-					(name "VCC"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin power_in line
-					(at 0 -12.7 90)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3703,7 +3703,7 @@
 		)
 	)
 	(symbol
-		(lib_id "swiecaca-kulka:STC8G1K08A")
+		(lib_id "broam:STC8G1K08A")
 		(at 150 90 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -3731,7 +3731,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_SO:SOP-8_3.9x4.9mm_P1.27mm"
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 			(at 150 74.76 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3789,7 +3789,7 @@
 			(uuid "33a92fe7-712d-4ece-a459-99b424d30235")
 		)
 		(instances
-			(project "swiecaca-kulka"
+			(project "broam"
 				(path "/0a1b2c3d-4e5f-6071-8293-a4b5c6d7e8f9"
 					(reference "U1")
 					(unit 1)
@@ -3894,7 +3894,7 @@
 			(uuid "c2f78f67-1ec1-46fe-a100-776e56348426")
 		)
 		(instances
-			(project "swiecaca-kulka"
+			(project "broam"
 				(path "/0a1b2c3d-4e5f-6071-8293-a4b5c6d7e8f9"
 					(reference "D1")
 					(unit 1)
@@ -3984,7 +3984,7 @@
 			(uuid "cfa4df02-6e3a-4dba-a489-d5d713b23252")
 		)
 		(instances
-			(project "swiecaca-kulka"
+			(project "broam"
 				(path "/0a1b2c3d-4e5f-6071-8293-a4b5c6d7e8f9"
 					(reference "Q1")
 					(unit 1)
@@ -4107,7 +4107,7 @@
 			(uuid "a9b32c4e-feb7-43f9-ae2f-918a3ad670a6")
 		)
 		(instances
-			(project "swiecaca-kulka"
+			(project "broam"
 				(path "/0a1b2c3d-4e5f-6071-8293-a4b5c6d7e8f9"
 					(reference "BT1")
 					(unit 1)
@@ -4219,7 +4219,7 @@
 			(uuid "106014b6-c3a6-42c1-adf7-4498c1213d61")
 		)
 		(instances
-			(project "swiecaca-kulka"
+			(project "broam"
 				(path "/0a1b2c3d-4e5f-6071-8293-a4b5c6d7e8f9"
 					(reference "U2")
 					(unit 1)
@@ -4318,7 +4318,7 @@
 			(uuid "e9f8b2db-8988-45a1-b3fe-cdce6f8fb96e")
 		)
 		(instances
-			(project "swiecaca-kulka"
+			(project "broam"
 				(path "/0a1b2c3d-4e5f-6071-8293-a4b5c6d7e8f9"
 					(reference "L1")
 					(unit 1)
@@ -4419,7 +4419,7 @@
 			(uuid "7758c0a5-dbc9-4980-bf63-1d949dc3b0c1")
 		)
 		(instances
-			(project "swiecaca-kulka"
+			(project "broam"
 				(path "/0a1b2c3d-4e5f-6071-8293-a4b5c6d7e8f9"
 					(reference "C1")
 					(unit 1)
@@ -4520,7 +4520,7 @@
 			(uuid "4fda3e96-4113-4a6d-9cc3-cc4b8efc1c04")
 		)
 		(instances
-			(project "swiecaca-kulka"
+			(project "broam"
 				(path "/0a1b2c3d-4e5f-6071-8293-a4b5c6d7e8f9"
 					(reference "C5")
 					(unit 1)
@@ -4619,7 +4619,7 @@
 			(uuid "0e3e07ad-b241-4230-8441-ecce3e60ae37")
 		)
 		(instances
-			(project "swiecaca-kulka"
+			(project "broam"
 				(path "/0a1b2c3d-4e5f-6071-8293-a4b5c6d7e8f9"
 					(reference "R4")
 					(unit 1)
@@ -4718,7 +4718,7 @@
 			(uuid "0be9a3e8-46f7-4006-8e00-a09435e9ff93")
 		)
 		(instances
-			(project "swiecaca-kulka"
+			(project "broam"
 				(path "/0a1b2c3d-4e5f-6071-8293-a4b5c6d7e8f9"
 					(reference "R1")
 					(unit 1)
@@ -4817,7 +4817,7 @@
 			(uuid "37ade047-8b72-4ff5-b2b0-c5666da72ee8")
 		)
 		(instances
-			(project "swiecaca-kulka"
+			(project "broam"
 				(path "/0a1b2c3d-4e5f-6071-8293-a4b5c6d7e8f9"
 					(reference "R2")
 					(unit 1)
@@ -4916,7 +4916,7 @@
 			(uuid "3f08c7e4-4d0e-4169-854a-c0b4188973a6")
 		)
 		(instances
-			(project "swiecaca-kulka"
+			(project "broam"
 				(path "/0a1b2c3d-4e5f-6071-8293-a4b5c6d7e8f9"
 					(reference "R3")
 					(unit 1)
@@ -5015,7 +5015,7 @@
 			(uuid "6f39935d-addf-4969-b995-b81bb4da7e6e")
 		)
 		(instances
-			(project "swiecaca-kulka"
+			(project "broam"
 				(path "/0a1b2c3d-4e5f-6071-8293-a4b5c6d7e8f9"
 					(reference "R5")
 					(unit 1)
@@ -5116,7 +5116,7 @@
 			(uuid "6270049d-2181-4891-a7e2-a1977ce924a6")
 		)
 		(instances
-			(project "swiecaca-kulka"
+			(project "broam"
 				(path "/0a1b2c3d-4e5f-6071-8293-a4b5c6d7e8f9"
 					(reference "C2")
 					(unit 1)
@@ -5217,7 +5217,7 @@
 			(uuid "4b37c62a-23a6-4140-9f14-94d1ece88f6f")
 		)
 		(instances
-			(project "swiecaca-kulka"
+			(project "broam"
 				(path "/0a1b2c3d-4e5f-6071-8293-a4b5c6d7e8f9"
 					(reference "C3")
 					(unit 1)
@@ -5318,7 +5318,7 @@
 			(uuid "632c7922-24f5-4db5-9c19-e3ead13d82d1")
 		)
 		(instances
-			(project "swiecaca-kulka"
+			(project "broam"
 				(path "/0a1b2c3d-4e5f-6071-8293-a4b5c6d7e8f9"
 					(reference "C4")
 					(unit 1)
@@ -5425,7 +5425,7 @@
 			(uuid "9902fdd3-0110-4135-a867-8ec6734b55ae")
 		)
 		(instances
-			(project "swiecaca-kulka"
+			(project "broam"
 				(path "/0a1b2c3d-4e5f-6071-8293-a4b5c6d7e8f9"
 					(reference "D2")
 					(unit 1)
@@ -5511,7 +5511,7 @@
 			(uuid "0205c26b-f663-4799-aae0-d41323830432")
 		)
 		(instances
-			(project "swiecaca-kulka"
+			(project "broam"
 				(path "/0a1b2c3d-4e5f-6071-8293-a4b5c6d7e8f9"
 					(reference "#FLG01")
 					(unit 1)
@@ -5597,7 +5597,7 @@
 			(uuid "a4c39399-66a8-4eee-af0c-914f198b55a0")
 		)
 		(instances
-			(project "swiecaca-kulka"
+			(project "broam"
 				(path "/0a1b2c3d-4e5f-6071-8293-a4b5c6d7e8f9"
 					(reference "#FLG02")
 					(unit 1)

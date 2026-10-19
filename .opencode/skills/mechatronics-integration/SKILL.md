@@ -128,7 +128,7 @@ zasilania drivera, + 100 nF ceramiczny, + dioda zabezpieczająca od przepięć.
 3. Podłącz silnik, sprawdź prąd rozruchowy, temperaturę drivera po 60 s pracy.
 4. Sprawdź krańcówki i `nFAULT` — symuluj błąd i potwierdź reakcję systemu.
 5. Zmierz temperaturę uzwojenia po długiej pracy — użyj `T_rms`, nie intuicji.
-6. Zapisz wyniki w `hardware/<projekt>/docs/` (tabela: test → wynik → wniosek).
+6. Zapisz wyniki w `docs/` (tabela: test → wynik → wniosek).
 
 ## Lista kontrolna projektu mechatronicznego
 

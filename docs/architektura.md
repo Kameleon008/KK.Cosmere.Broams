@@ -1,4 +1,4 @@
-# Architektura — świecąca kulka (ładowalna, RGB, uC, trigger = ciemność)
+# Architektura — broam (ładowalny, RGB, uC, trigger = ciemność)
 
 ## Schemat blokowy
 
@@ -29,11 +29,16 @@
 | Zasilanie | LiPo ~20 mAh + protekcja (DW01A + FS8205A) |
 | Ładowanie | **indukcyjne**: cewka RX + rezonans + mostek + ładowarka CC/CV |
 
-## Uwaga: rozważany i odrzucony wariant (wstrząs)
+## Trigger: ciemność (wdrożony) vs wstrząs (opcja)
 
-Rozważano trigger od wstrząsu (akcelerometr LIS2DW12 / BMA400 z przerwaniem
-wake-up). Odrzucone na rzecz czujnika światła. Akcelerometr wraca do gry tylko
-gdyby chciano rozpoznawać gesty (potrząśnięcie, obrót).
+- **Wdrożone (v3, ten schemat):** trigger od **ciemności** — fototranzystor SMD
+  + rezystor 1–10 MΩ, pomiar duty-cycled z blankingiem przy LED ON.
+- **Opcja (nieodrzucona):** trigger od **wstrząsu** — mechaniczny SW-18010P
+  (tanio, bez uC) albo akcelerometr z przerwaniem wake-up (LIS2DW12 / BMA400,
+  0,30–0,80 $). Do wdrożenia, gdy potrzebna jest reakcja na potrząśnięcie/gest
+  lub gdy broam może leżeć w świetle.
+- Warianty można łączyć: fototranzystor jako trigger podstawowy + akcelerometr
+  jako drugie źródło wybudzenia (osobne przerwanie uC).
 
 ## Czujnik światła
 
@@ -49,7 +54,7 @@ gdyby chciano rozpoznawać gesty (potrząśnięcie, obrót).
 1. **Crosstalk** — LED oświetla czujnik od wewnątrz. Pomiar ambient tylko przy
    **LED wyłączonym** (blanking: np. 1 ms co 500 ms) lub przesłona.
 2. **Kalibracja progu** — detekcja przez żywicę zależy od ścianki i pigmentu →
-   próg mierzyć w gotowej kuli.
+   próg mierzyć w gotowym broamie.
 3. **Dynamika** — liczy się tylko dolny zakres („ciemno”), góra może się nasycać.
 
 ## Bilans (one-shot, simulation/obliczenia_v3.py)
@@ -93,17 +98,27 @@ GPIO wg noty: **P3.0–P3.3, P5.4, P5.5**. Przypisanie funkcji:
 > Kolejność pinów w obudowie SOP-8 i przydział ADC **do weryfikacji w nocie**
 > (patrz „Do weryfikacji”).
 
-### Netlista blokowa
+### Netlista — stan faktyczny (`schematic/broam.net`)
 
-| Sieć | Węzły |
-|---|---|
-| `VBAT` | BT1+, U3 (pack+), U2.BAT, U1.VCC, D1.anoda, Q1.kolektor |
-| `GND` | BT1−, U1.GND, U2.GND, U3.GND, C2–C4, R4 dolny |
-| `CHG_IN` | mostek D2+, C5+, U2.VCC |
-| `AC1`/`AC2` | L1 ↔ C1 ↔ mostek |
-| `LIGHT` | Q1.emiter → R4 → GND; węzeł Q1.emiter → U1 (ADC) |
-| `LED_R`/`LED_G`/`LED_B` | U1 (3× PWM) → R1/R2/R3 → anody D1 |
-| `ISP_RX`/`ISP_TX` | U1 (programowanie UART) |
+16 netów, 47 node'ów, 17 komponentów (19 symboli − 2× `PWR_FLAG` typu `#PWR`).
+Pinout U1 zgadza się z tabelą przypisania funkcji powyżej (np. U1.1 = P5.4 =
+`LED_B_CTRL`, U1.3 = P5.5 = `LIGHT`, U1.5/U1.6 = P3.0/P3.1 = `ISP_RX`/`ISP_TX`).
+
+| Sieć | Węzły (ref.pin) | Uwaga |
+|---|---|---|
+| `VBAT` | BT1.1, C2.1, C3.1, C4.1, Q1.1, U1.2, U2.3 | szyna aku — **bez** `PWR_FLAG` |
+| `GND` | BT1.2, C2.2, C3.2, C4.2, C5.2, D1.4, D2.2, R4.2, R5.2, U1.4, U2.2 | 11 węzłów |
+| `CHG_IN` | C5.1, D2.1, U2.4 | mostek → ładowarka |
+| `AC1` | C1.1, D2.3, L1.1 | rezonans cewki |
+| `AC2` | C1.2, D2.4, L1.2 | rezonans cewki |
+| `LIGHT` | Q1.2, R4.1, U1.3 | emiter fototranzystora → ADC |
+| `LED_R_CTRL` / `LED_G_CTRL` / `LED_B_CTRL` | R1.1–U1.7 / R2.1–U1.8 / R3.1–U1.1 | PWM z uC |
+| `LED_R` / `LED_G` / `LED_B` | D1.1–R1.2 / D1.2–R2.2 / D1.3–R3.2 | za rezystorem, katoda D1.4 → GND |
+| `PROG` | R5.1, U2.5 | rezystor prądu ładowania |
+| `ISP_RX` / `ISP_TX` | U1.5 / U1.6 | **wiszą — brak złącza ISP** (2× `isolated_pin_label`) |
+
+Uwaga: w schemacie **nie ma bloku protekcji** (U3 DW01A + Q2 FS8205A) — stąd brak
+netu typu `PACK+`/`PACK−` w netliście.
 
 ## Wybór MCU — alternatywy
 
@@ -125,7 +140,7 @@ wymaga LDO; MCU o zakresie ≥ 5,5 V działa **wprost z LiPo**.
 
 **Wpływ standby na żywotność (aku 20 mAh):** 0,4 µA → ~5,7 roku; 3 µA → ~9
 miesięcy; 10 µA → ~83 dni. STC8G1K08A jest tani i bez LDO, ale przy częstym
-ładowaniu; jeśli kula ma leżeć miesiącami — rozważyć ATtiny402.
+ładowaniu; jeśli broam ma leżeć miesiącami — rozważyć ATtiny402.
 
 ## Stan narzędzi
 
@@ -136,6 +151,12 @@ miesięcy; 10 µA → ~83 dni. STC8G1K08A jest tani i bez LDO, ale przy częstym
 - Serwer MCP `kicad` rozwiązuje ścieżki **względem katalogu wtyczki**
   (w `npm-cache`) → **używać ścieżek absolutnych**.
 - Format schematu (wg wzorca z instalacji): `version 20250610`.
+- Format biblioteki symboli: `version 20251024` + `generator_version 10.0`
+  (po `kicad-cli sym upgrade`); plik w formacie KiCad 9 (`20241209`) potrafi
+  wywołać fałszywe `lib_symbol_mismatch`.
+- Wzorzec pliku projektu: `C:\Program Files\KiCad\10.0\share\kicad\template\kicad.kicad_pro`
+  (skopiowany i przemianowany na `schematic/broam.kicad_pro`).
+- Wzorce tablic bibliotek: `...\share\kicad\template\{sym,fp}-lib-table`.
 - W bibliotekach KiCad są: `Device:R`, `Device:C`, `Device:LED_RGBK`,
   `Device:Q_Photo_NPN`, `Device:L`, `Device:Battery_Cell`, `Device:D_Schottky`,
   `Battery_Management:MCP73831-2-OT`. Brak symboli: STC8G1K08A, TP4054, DW01A,
@@ -143,7 +164,8 @@ miesięcy; 10 µA → ~83 dni. STC8G1K08A jest tani i bez LDO, ale przy częstym
 
 ## Do weryfikacji w nocie katalogowej
 
-- **STC8G1K08A:** dokładny pinout SOP-8, który pin ma ADC, prąd power-down.
+- **STC8G1K08A:** dokładny pinout SOP-8, który pin ma ADC, prąd power-down,
+  oraz czy obudowa SOP-8 z noty to `SOIC-8_3.9x4.9mm_P1.27mm` (footprint w schemacie).
 - **TP4054:** pinout SOT-23-5 i minimalne Vin (czy wystarczy z prostownika).
 - **DW01A/FS8205A:** progi OVP/UVLO.
 - **Fototranzystor:** prąd ciemny i czułość przy 1–10 lx.
@@ -151,12 +173,63 @@ miesięcy; 10 µA → ~83 dni. STC8G1K08A jest tani i bez LDO, ale przy częstym
 
 ## Schemat (KiCad) — stan
 
-Pliki: `schematic/swiecaca-kulka.kicad_sch`, `swiecaca-kulka.kicad_sym`,
-`schematic/swiecaca-kulka.pdf`, `swiecaca-kulka.net`, `swiecaca-kulka.erc.json`.
+Projekt KiCad leży w `schematic/` — tak wymaga KiCad: plik projektu musi leżeć
+obok schematu (dla `pcb/` powstanie osobny plik projektu, gdy zacznie się routing).
 
-**Stan: 19 symboli, 48 sieci, ERC = 0 błędów, 90 ostrzeżeń** (głównie
-`endpoint_off_grid` — symbole postawione poza siatką — oraz brak wpisów
-`Device`/`Battery_Management`/`swiecaca-kulka` w sym-lib-table projektu).
+| Plik | Rola |
+|---|---|
+| `broam.kicad_pro` | projekt (na bazie wzorca KiCad 10, `sheets: []`) |
+| `broam.kicad_sch` | schemat: 19 symboli, 48 etykiet globalnych, 0 junctionów |
+| `broam.kicad_sym` | biblioteka własna: `STC8G1K08A` (format 20251024 = KiCad 10) |
+| `sym-lib-table` | biblioteki projektu: `Device`, `Battery_Management`, `power`, `broam` |
+| `fp-lib-table` | biblioteki footprintów: `Package_SO`, `Package_TO_SOT_SMD` |
+| `broam.net`, `broam.erc.json`, `broam.pdf` | eksporty generowane `kicad-cli` |
+
+**Stan ERC: 0 błędów, 69 ostrzeżeń** (`kicad-cli sch erc --severity-all`,
+2026-10-19): 67× `endpoint_off_grid` (symbole postawione poza siatką) i 2×
+`isolated_pin_label` (`ISP_RX`/`ISP_TX` — brak złącza programowania).
+
+Stan wyjściowy był gorszy (90 ostrzeżeń). Usunięte grupy:
+
+- **19× brak bibliotek** (`Device`, `Battery_Management`, `power`, `broam`) —
+  dodano `sym-lib-table` i `fp-lib-table` projektu,
+- **1× nieistniejący footprint U1** — `Package_SO:SOP-8_3.9x4.9mm_P1.27mm`
+  nie istnieje w bibliotece; poprawiono na **`Package_SO:SOIC-8_3.9x4.9mm_P1.27mm`**
+  (do potwierdzenia w nocie: czy SOP-8 = SOIC-8 3,9×4,9 mm / raster 1,27 mm),
+- **1× `lib_symbol_mismatch`** — biblioteka była w formacie KiCad 9; po
+  `kicad-cli sym upgrade` i zsynchronizowaniu kopii symbolu w schemacie
+  (odpowiednik GUI: *Tools → Update Symbols from Library*) ostrzeżenie zniknęło.
+
+### Odtwarzanie eksportów
+
+```powershell
+$cli = "C:\Program Files\KiCad\10.0\bin\kicad-cli.exe"
+& $cli sch erc --format json --severity-all -o schematic\broam.erc.json schematic\broam.kicad_sch
+& $cli sch export netlist --format kicadsexpr -o schematic\broam.net schematic\broam.kicad_sch
+& $cli sch export pdf -o schematic\broam.pdf schematic\broam.kicad_sch
+```
+
+### Pułapki KiCad (sprawdzone empirycznie)
+
+1. **Tabele bibliotek działają tylko z plikiem projektu.** Bez `*.kicad_pro`
+   obok schematu `kicad-cli` ignoruje `sym-lib-table` → ERC znów zgłasza brak
+   bibliotek `Device`, `power` itd. (sprawdzone na kopiach schematu o innej nazwie).
+2. **`sym-lib-table` / `fp-lib-table` nie mogą mieć BOM-a** — KiCad odrzuca plik
+   komunikatem *„has type UNINITIALIZED but expected SYMBOL; skipping”*. Zapisywać
+   jako UTF-8 **bez BOM**, LF (uwaga: `Set-Content -Encoding utf8` w PowerShell 5.1
+   dodaje BOM).
+3. **Kolejność pinów w symbolu ma znaczenie** dla testu `lib_symbol_mismatch` —
+   kopia w schemacie musi być zgodna z biblioteką co do kolejności, nie tylko
+   co do zbioru pinów.
+4. Ścieżki bibliotek: `${KICAD10_SYMBOL_DIR}`, `${KICAD10_FOOTPRINT_DIR}`,
+   własne: `${KIPRJMOD}/broam.kicad_sym`.
+5. Na tej maszynie **nie ma globalnych tablic bibliotek**
+   (`%APPDATA%\kicad\10.0\sym-lib-table`) → w GUI widoczne są tylko biblioteki
+   z tabeli projektu. Pełną listę przywraca skopiowanie
+   `C:\Program Files\KiCad\10.0\share\kicad\template\{sym,fp}-lib-table`
+   do `%APPDATA%\kicad\10.0\`.
+6. Plik schematu ma końce linii **CRLF** (spadek po serwerze MCP); KiCad to czyta,
+   ale jego własny zapis to LF — do wyrównania przy okazji najbliższej edycji.
 
 | Blok | Symbole |
 |---|---|
@@ -186,18 +259,22 @@ Obejście: `simulation/fix_sch.py <plik.kicad_sch>` — wynosi zagnieżdżone wp
 edycji schematu MCP należy uruchomić ten skrypt.
 
 Dodatkowo `kicad_create_symbol` tworzy symbol, którego KiCad nie wczytuje
-(`hide` wewnątrz `effects`) — bibliotekę `swiecaca-kulka.kicad_sym` napisano
+(`hide` wewnątrz `effects`) — bibliotekę `broam.kicad_sym` napisano
 ręcznie.
 
 ### Do zrobienia na schemacie
 
-- dodać blok protekcji LiPo (DW01A + FS8205A),
-- dodać złącze/pady do programowania UART (ISP_RX/ISP_TX),
+- dodać blok protekcji LiPo (DW01A + FS8205A) — w schemacie go nie ma,
+- dodać złącze/pady do programowania UART, żeby `ISP_RX`/`ISP_TX` przestały
+  wisieć (2 ostrzeżenia `isolated_pin_label`),
+- przesunąć symbole na siatkę 1,27 mm (67 ostrzeżeń `endpoint_off_grid`) —
+  najprościej przy okazji dodawania nowych bloków,
 - przypisać footprinty pasywnym (R/C 0402/0603),
-- dodać `PWR_FLAG` na `VBAT` i `GND` (usunąć ostrzeżenia ERC).
+- **nie** dodawać `PWR_FLAG` na `VBAT`: pin `U2.VBAT` (MCP73831) jest już typu
+  *power output*, a dwie flagi na jednej sieci dają błąd ERC `pin_to_pin`.
 
 ## Pytania otwarte
 
 - jasność RGB (prąd na kanał) — wpływa na czas pracy,
-- czy kula ma być ładowana często (wtedy STC8G1K08A OK), czy leżeć miesiącami
+- czy broam ma być ładowany często (wtedy STC8G1K08A OK), czy leżeć miesiącami
   (wtedy ATtiny402).

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""swiecaca-kulka v2 - wariant ladowalny indukcyjnie + RGB + uC.
+"""broam v2 - wariant ladowalny indukcyjnie + RGB + uC.
 
 Zmiany vs v1:
 - LED RGB sterowany PWM z uC (3 kanaly)

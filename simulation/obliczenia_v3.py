@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""swiecaca-kulka v3 - trigger: CIEMNOSC (czujnik swiatla).
+"""broam v3 - trigger: CIEMNOSC (czujnik swiatla).
 
 Zachowania:
  A) one-shot  : zrobi sie ciemno -> swieci T_on (15 min) -> wylacza sie (re-arm po jasnosci)
@@ -64,7 +64,7 @@ for hours in (4, 8):
 
 print("\n  Wniosek: ciagle swiecenie jasne przez noc NIE zmiesci sie w 20 mAh.")
 print("  Trzeba: (a) przygasic, (b) dodac timeout (np. 30-60 min), albo")
-print("          (c) wiekszy akumulator (12x12x3 ~40 mAh) -> wieksza kula.")
+print("          (c) wiekszy akumulator (12x12x3 ~40 mAh) -> wiekszy broam.")
 
 # --------------------------------------------------- 4. Koszt czujnika -------
 print("\n=== 4. Koszt czujnika swiatla (orientacyjnie) ===")

@@ -8,7 +8,8 @@ sterujący oraz dokumentacja techniczna.
 - Domyślnie komunikuj się **po polsku**.
 - Nazwy własne komponentów, symboli, narzędzi i parametrów zostawiaj w oryginale
   (np. *buck converter*, `V_GS(th)`, `kicad-cli`) — nie tłumacz ich na siłę.
-- Dokumentację w `hardware/` pisz po polsku, chyba że projekt wymaga inaczej.
+- Dokumentację w `docs/` i `README.md` pisz po polsku, chyba że projekt wymaga
+  inaczej.
 
 ## Zakres konfiguracji
 
@@ -26,19 +27,49 @@ tylko tutaj:
 
 ## Struktura repozytorium
 
+Repozytorium trzyma **jeden projekt sprzętowy** bezpośrednio w korzeniu —
+świadomie **bez** katalogu `hardware/<projekt>/`. Katalogi tematyczne:
+
 ```text
-hardware/<projekt>/
-├─ docs/          # założenia, wymagania, notatki projektowe, decyzje
-├─ schematic/     # KiCad: *.kicad_pro, *.kicad_sch + eksporty PDF/SVG
-├─ pcb/           # *.kicad_pcb, stack-up, reguły projektowe
-├─ simulation/    # netlisty SPICE (*.cir/*.sp), wyniki, wykresy
+<repo>/
+├─ README.md      # cel, wymagania, założenia, pytania otwarte, wyniki obliczeń
+├─ docs/          # architektura układu, decyzje projektowe, notatki, TODO
+├─ schematic/     # projekt KiCad: *.kicad_pro, *.kicad_sch, *.kicad_sym,
+│                 #   sym-lib-table, fp-lib-table + eksporty *.net/PDF/ERC
+├─ pcb/           # *.kicad_pcb, stack-up, reguły projektowe (DRC)
+├─ simulation/    # skrypty obliczeniowe (*.py), netlisty SPICE (*.cir/*.sp), wyniki
 ├─ bom/           # BOM.csv, zamienniki, linki do dostawców
 ├─ firmware/      # kod sterujący (jeśli dotyczy)
-└─ firmware/../diagrams/  # schematy blokowe, Mermaid, rysunki
+└─ diagrams/      # schematy blokowe, Mermaid, rysunki
 ```
 
-Każdy nowy projekt zakładaj w osobnym katalogu `hardware/<projekt>/` i twórz w nim
-`docs/README.md` z krótkim opisem celu i założeniach.
+Nazwy plików i identyfikatory w KiCad (nazwa projektu, nickname biblioteki
+`*.kicad_sym`, `lib_id`) trzymaj spójne z nazwą projektu. Nie przenoś projektu
+do podkatalogu bez uzgodnienia — struktura jest płaska celowo.
+
+### KiCad — zasady praktyczne (sprawdzone na tym repo)
+
+- **Plik `*.kicad_pro` musi leżeć w tym samym katalogu co `*.kicad_sch`.** Tabele
+  bibliotek projektu (`sym-lib-table`, `fp-lib-table`) leżą obok i są honorowane
+  **tylko wtedy**, gdy plik projektu istnieje — inaczej ERC zgłasza brak
+  bibliotek `Device`, `power` itd.
+- **`sym-lib-table` / `fp-lib-table` zapisuj jako UTF-8 bez BOM, LF.** BOM
+  powoduje, że KiCad pomija tablicę (*„has type UNINITIALIZED but expected
+  SYMBOL; skipping”*). Uwaga: `Set-Content -Encoding utf8` w PowerShell 5.1
+  dodaje BOM — użyj Pythona z `newline="\n"` i `encoding="utf-8"`.
+- **Po zmianie symbolu w bibliotece zsynchronizuj kopię w schemacie**
+  (GUI: *Tools → Update Symbols from Library*) — inaczej ERC zgłasza
+  `lib_symbol_mismatch`. Porównanie obejmuje **kolejność pinów**, nie tylko ich
+  zbiór.
+- Bibliotekę w starym formacie podnieś przez
+  `kicad-cli sym upgrade <plik.kicad_sym>`.
+- `kicad-cli` nie jest w PATH → `C:\Program Files\KiCad\10.0\bin\kicad-cli.exe`.
+  ERC: `kicad-cli sch erc --format json --severity-all -o <raport> <schemat>`,
+  netlista: `kicad-cli sch export netlist --format kicadsexpr -o <plik.net> <schemat>`.
+- Nie zostawiaj po testach plików tymczasowych w `schematic/` (probe'y,
+  `<nazwa>_test.json`). `*.kicad_prl` i `*-bak` są ignorowane przez `.gitignore`.
+- Eksporty (`*.net`, `*.pdf`, `*.erc.json`) są generowane — nie edytuj ich
+  ręcznie, regeneruj `kicad-cli`.
 
 ## Zasady pracy inżynierskiej
 
